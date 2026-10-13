@@ -20,7 +20,8 @@
 body { margin: 0; background: var(--paper); color: var(--ink); }
 a { color: inherit; }
 .section-wrap { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
-.topbar { height: 66px; padding: 0 4.3vw; display: flex; align-items: center; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--line); background: var(--paper); }
+.topbar { position: sticky; top: 0; z-index: 20; height: 66px; padding: 0 4.3vw; display: flex; align-items: center; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--line); background: var(--paper); }
+section[id] { scroll-margin-top: 82px; }
 .wordmark, .topbar nav a, .topbar-cta, .eyebrow, .hero-note, .stats small, .hero-scroll, .project-meta, .result-line, .image-guidance, .role-date, .cap-number, .photo-placeholder, .photo-caption, .footer { font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; }
 .wordmark { text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
 .wordmark span { color: var(--signal); }
@@ -184,9 +185,9 @@ a { color: inherit; }
 
 @media (max-width: 540px) {
   .section-wrap { width: calc(100% - 36px); }
-  .topbar { height: auto; min-height: 58px; padding-inline: 18px; }
+  .topbar { height: auto; min-height: 58px; padding-inline: 18px; gap: 16px; }
   .wordmark { font-size: 11px; }
-  .topbar nav { gap: 10px; }
+  .topbar nav { gap: 8px; }
   .topbar nav a { font-family: var(--mono); font-size: 10px; }
   .topbar nav a:nth-child(3) { display: none; }
   .hero { min-height: 640px; padding-top: 84px; }
